@@ -80,5 +80,5 @@ from sklearn.model_selection import KFold, cross_val_score
 
 rfc = RandomForestClassifier(n_jobs=-1)
 k_fold = KFold(n_splits=5)
-cross_val_score(rfc, X_features, train['id'], cv=k_fold, scoring="accuracy", n_jobs=-1)
+ret = cross_val_score(rfc, X_features, train['id'], cv=k_fold, scoring="accuracy", n_jobs=-1)
 
